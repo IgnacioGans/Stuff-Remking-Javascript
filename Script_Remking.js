@@ -89,4 +89,25 @@ var veggies = "carrot";
 		console.log("Method For + charAt + Push " +rk_eachLetter);
 
 
+/***************************************************************************************************/
+
+var targetDiv = document.getElementsByClassName("parrafo_titulo_canal")[0];
+var checkBv = document.body.contains(targetDiv);
+function refreshBV(){		
+	if(checkBv === true){
+		location.reload();
+		clearInterval(refreshIntervalId);
+		console.log('refresh!')
+	}else{
+		console.log("Ready!");
+	}	
+}
+
+var refreshInterval = setInterval(refreshBV, 10000);
+
+refreshInterval
+
+
+
+
 
