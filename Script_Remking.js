@@ -107,6 +107,25 @@ var refreshInterval = setInterval(refreshBV, 10000);
 
 refreshInterval
 
+/*********************************************************************************************************/
+function refreshBV(){		
+	var targetDiv = document.getElementsByClassName("parrafo_titulo_canal")[0];
+	var checkBv = document.body.contains(targetDiv);
+	var refreshInterval = setInterval(refreshBV, 3000);
+	var x = document.getElementsByTagName("h1")[0].textContent;
+	if(checkBv === true || x === "Service Unavailable"){
+		location.reload();
+		refreshInterval
+		console.log("Valor x es => "+ x)
+		console.log("Valor checkBv es => "+ checkBv)
+		console.log('refresh!')
+	}else{
+		console.log("Ready!");
+		clearInterval(refreshInterval);
+	}	
+}
+
+
 
 
 
